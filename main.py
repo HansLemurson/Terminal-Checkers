@@ -1,4 +1,5 @@
 from blessings import Terminal
+from game import Game, Player
 
 t = Terminal()
 print(t.green+"Python Operational")
@@ -15,15 +16,19 @@ def printBoard(board,row_offset=2,col_offset=4):
       print(text)
 
 
-TEST_BOARD = [
-  [0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0],
-]
+# TEST_BOARD = [
+#   [0,0,0,0,0,0,0,0],
+#   [0,0,0,0,0,0,0,0],
+#   [0,0,0,0,0,0,0,0],
+#   [0,0,0,0,0,0,0,0],
+#   [0,0,0,0,0,0,0,0],
+#   [0,0,0,0,0,0,0,0],
+#   [0,0,0,0,0,0,0,0],
+#   [0,0,0,0,0,0,0,0],
+# ]
 
-printBoard(TEST_BOARD)
+# printBoard(TEST_BOARD)
+p1 = Player("Alice",t.red)
+p2 = Player("Bob", t.color(0))
+g = Game(p1,p2)
+g.printBoard(4,4)
