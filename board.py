@@ -49,9 +49,10 @@ class Tile:
 # Holds the color, owner, position, and type of a piece
 #===========
 class Piece:
-  SYMBOLS = {"pawn":"\u23fa", "king":"\u25c9"}
-  #--------------------------------------------------
-  def __init__(self,owner,type="pawn"):
+  #U+2742  ❂ CIRCLED OPEN CENTRE EIGHT POINTED STAR
+  #U+2B24	 ⬤ BLACK LARGE CIRCLE
+  SYMBOLS = {"pawn":"\u2742", "king":"\u2b24"} #--------------------------------------------------
+  def __init__(self,owner,type="king"):
     self.owner = owner
     self.type = type
   #--------------------------------------------------
